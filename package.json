@@ -30,5 +30,12 @@
   "bugs": {
     "url": "https://github.com/Munter/grunt-livestyle/issues"
   },
-  "homepage": "https://github.com/Munter/grunt-livestyle"
+  "homepage": "https://github.com/Munter/grunt-livestyle",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "jshint": "^2.5.6"
+  },
+  "dependencies": {
+    "livestyle": "^0.10.0"
+  }
 }

@@ -28,15 +28,15 @@ npm install --save-dev grunt-livestyle
 
 Grunt-livestyle enables you to preprocess Less, Scss, Jsx and images in the HTTP stream. However it doesn't want to lock you down to a specific version of a preprocessor, as functionality might vary across versions, you might be stuck on an old version, you want to use a beta or whatever. This means installing the preprocessor is up to you. You will get a warning in the logs if you try to send something through the pipeling that is missing the corresponding module to compile, however it might be nice just to install what you need up front:
 
-**Less:** `npm install --save-dev less`
-**Scss:** `npm install --save-dev node-sass`
-**Jsx:** `npm install --save-dev react-tools`
+- **Less:** `npm install --save-dev less`
+- **Scss:** `npm install --save-dev node-sass`
+- **Jsx:** `npm install --save-dev react-tools`
 
 Dependencies for image processing are slightly more elaborate as the image manipulation libraries are operating system specific:
 
-**Linux (Debian):** `sudo apt-get install -y libjpeg8-dev libgif-dev optipng pngcrush pngquant libpango1.0-dev graphicsmagick libjpeg-turbo-progs inkscape`
-**MacOX (Homebrew):** `brew install jpeg giflib optipng pngcrush pngquant pango graphicsmagick jpeg-turbo inkscape`
-**Windows:** Unknown. If you have any windows experience we're taking pull requests for docs
+- **Linux (Debian):** `sudo apt-get install -y libjpeg8-dev libgif-dev optipng pngcrush pngquant libpango1.0-dev graphicsmagick libjpeg-turbo-progs inkscape`
+- **MacOX (Homebrew):** `brew install jpeg giflib optipng pngcrush pngquant pango graphicsmagick jpeg-turbo inkscape`
+- **Windows:** Unknown. If you have any windows experience we're taking pull requests for docs
 
 
 Minimal Configuration Example
@@ -44,7 +44,7 @@ Minimal Configuration Example
 
 Grunt-livestyle has as many sane defaults as possible. If your project is just a static web page, the simplest setting should be enough for you.
 
-``` javascript
+```JavaScript
 module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-livestyle');
 
@@ -54,7 +54,6 @@ module.exports = function (grunt) {
         }
     });
 };
-
 ```
 
 Full Configuration Example

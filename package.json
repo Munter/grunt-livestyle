@@ -1,0 +1,34 @@
+{
+  "name": "grunt-livestyle",
+  "version": "0.0.0",
+  "description": "A static file development server with automated file watching, less/sass/jsx preprocessing, image preprocessing, autoprefixing and proxy passthrough",
+  "main": "tasks/grunt-livestyle.js",
+  "scripts": {
+    "lint": "jshint .",
+    "test": "npm run lint",
+    "travis": "npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Munter/grunt-livestyle.git"
+  },
+  "keywords": [
+    "gruntplugin",
+    "web",
+    "dev",
+    "development",
+    "static",
+    "server",
+    "livereload",
+    "less",
+    "sass",
+    "jsx",
+    "autoprefix"
+  ],
+  "author": "Peter Müller <munter@fumle.dk>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Munter/grunt-livestyle/issues"
+  },
+  "homepage": "https://github.com/Munter/grunt-livestyle"
+}

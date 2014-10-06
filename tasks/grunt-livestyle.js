@@ -16,7 +16,7 @@ module.exports = function (grunt) {
                 cssImages: config.watchCssImages === false ? false : true,
                 processimage: config.processimage === false ? false : true,
                 debug: !!config.debug,
-                mappings: {},
+                mappings: config.mappings || {},
                 browsers: config.browsers || [
                     '> 1%',
                     'last 2 versions',
@@ -24,17 +24,6 @@ module.exports = function (grunt) {
                     'Opera 12.1'
                 ]
             };
-
-        if (config.mappings) {
-            config.mappings.forEach(function (urlEqualsDir) {
-                var matchUrlEqualsDir = urlEqualsDir.match(/^([^=]+)=([^=]+)$/);
-                if (matchUrlEqualsDir) {
-                    options.mappings[matchUrlEqualsDir[1]] = matchUrlEqualsDir[2];
-                } else {
-                    throw 'Invalid --map syntax: ' + urlEqualsDir;
-                }
-            });
-        }
 
         var server = require('livestyle/lib/createLiveStyleApp')({
             watchHtml: options.html,

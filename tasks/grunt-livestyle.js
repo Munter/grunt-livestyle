@@ -38,7 +38,23 @@ module.exports = function (grunt) {
             processImage: options.processimage,
             mappings: options.mappings,
             proxy: options.proxy
-        }).listen(options.port, '0.0.0.0');
+        }).listen(options.port, '0.0.0.0', function (error) {
+            if (error) {
+                return grunt.log.writeln(error);
+            }
+
+            if (options.proxy) {
+                grunt.log.writeln('Proxying to ' + options.proxy);
+                if (options.root) {
+                    grunt.log.writeln('Serving static CSS files from ' + options.root);
+                }
+            } else if (options.root) {
+                grunt.log.writeln('Serving static files from ' + options.root);
+            }
+
+            grunt.log.writeln('Listening to http://' + '0.0.0.0' + ':' + options.port + '/');
+            grunt.event.emit('serverListening', options.port);
+        });
 
         if (!options.dead) {
             require('livestyle/lib/installLiveCssFileWatcherInServer')(server, {
@@ -51,15 +67,5 @@ module.exports = function (grunt) {
             }, require('socket.io'));
         }
 
-        if (options.proxy) {
-            grunt.log.writeln('Proxying to ' + options.proxy);
-            if (options.root) {
-                grunt.log.writeln('Serving static CSS files from ' + options.root);
-            }
-        } else if (options.root) {
-            grunt.log.writeln('Serving static files from ' + options.root);
-        }
-
-        grunt.log.writeln('Listening to http://' + '0.0.0.0' + ':' + options.port + '/');
     });
 };

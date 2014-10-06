@@ -7,14 +7,14 @@ module.exports = function (grunt) {
         var config = grunt.config(this.name) || {},
             options = {
                 root: config.root || 'app',
-                port: config.port || 3000,
+                port: config.port || 9000,
                 proxy: config.proxy || null,
                 jsx: config.jsx || true,
                 less: config.less || true,
                 scss: config.scss || true,
                 html: config.watchHtml || true,
                 cssImages: config.watchCssImages || true,
-                processimage: config.processimage,
+                processimage: config.processimage || true,
                 debug: !!config.debug,
                 mappings: {},
                 browsers: config.browsers || [

@@ -50,7 +50,7 @@ module.exports = function (grunt) {
 
     grunt.initConfig({
         'livestyle': {
-            root: 'demo'
+            root: 'app'
         }
     });
 };
@@ -59,7 +59,69 @@ module.exports = function (grunt) {
 Full Configuration Example
 --------------------------
 
-TODO
+This shows you all possible configuration parametres, a bit of explanation on each and their default setting.
+
+```JavaScript
+module.exports = function (grunt) {
+    grunt.loadNpmTasks('grunt-livestyle');
+
+    grunt.initConfig({
+        'livestyle': {
+            // The root of your web application
+            root: 'app',
+
+            // The port that the web server will listen on
+            port: 9000,
+
+            // The fallback web server to proxy requests to in case of missing files
+            // Very useful if you are working with a remote API or a backend that generates dynamic html
+            // The value should be a valid url to the server you want to proxy to
+            proxy: null,
+
+            // Compile React Jsx to JavaScript
+            jsx: true,
+
+            // Compile Less to CSS
+            less: true,
+
+            // Compile Scss to CSS using node-sass
+            scss: true,
+
+            // Watch HTML-files and livereload on changes
+            html: true,
+
+            // Watch CSS bakground images and livereload on changes
+            cssImages: true,
+
+            // Run each image through the image processing pipeline exposed by express-processimage
+            // Allows you to resize, recompress, change image format, rasterize SVG and much more
+            // Reading the documentation is highly recommended: https://github.com/papandreou/express-processimage#express-processimage
+            processimage: true,
+
+            // Enable debug logging. VERY chatty!
+            debug: false,
+
+            // Translate the paths of incoming requests.
+            // Think of it as a very primitive mod_rewrite that only works on request path prefixes.
+            // For example, to translate all requests for /remoteDir/* to /localDir/* do this:
+            // {
+            //    '/remoteDir/': '/localDir/'
+            // }
+            //
+            mappings: {},
+
+            // Browser version configuration
+            // This is used for autoprefixing, but may in the future also be used to browser version specific hacks
+            browsers: config.browsers || [
+                '> 1%',
+                'last 2 versions',
+                'Firefox ESR',
+                'Opera 12.1'
+            ]
+        }
+    });
+};
+```
 
 
 License

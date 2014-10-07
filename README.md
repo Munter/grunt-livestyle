@@ -12,7 +12,7 @@ By default it sets up file watchers on all files it knows how to live reload and
 
 By default it autoprefixes all outgoing CSS. Since you probably have autoprefixer in your production build step, you also want it in your development cycle to make sure you are actually working on the same output.
 
-By default it can post process images in the HTTP stream for you. Have you ever been annoyed at having to manually create responsive image sizes by hand, resizing favicons to 16 different sizes or having to manually tweak image color palettes or compression rations? In that case this is a massive power tool for you. Livestyle leverages the power of GraphicsMagick, pngquant, pngcrush, optipng, jpegtran etc. You can resize, recompress and manipulate images in lots of ways, simply by adding some HTTP parameters at the end of each image URL. This all happens in the HTTP stream with the original image untouched, leaving you with a clean interface to your graphics departments. Take a look at the many options available via [express-processimage](https://github.com/papandreou/express-processimage#query-string-syntax)
+By default it can post process images in the HTTP stream for you. Have you ever been annoyed at having to manually create responsive image sizes by hand, resizing favicons to 16 different sizes or having to manually tweak image color palettes or compression ratios? In that case this is a massive power tool for you. Livestyle leverages the power of GraphicsMagick, pngquant, pngcrush, optipng, jpegtran etc. You can resize, recompress and manipulate images in lots of ways, simply by adding some HTTP parameters at the end of each image URL. This all happens in the HTTP stream with the original image untouched, leaving you with a clean interface to your graphics department. Take a look at the many options available via [express-processimage](https://github.com/papandreou/express-processimage#query-string-syntax)
 
 Grunt-livestyle has a really good team mate [grunt-reduce](https://github.com/Munter/grunt-reduce), which adds the same functionalities, only for a web performance optimized production build output. Use these two in combination for an optimal lean and fast development loop with a highly optimal bundled and compressed end result.
 
@@ -26,7 +26,7 @@ To install the basic functionality:
 npm install --save-dev grunt-livestyle
 ```
 
-Grunt-livestyle enables you to preprocess Less, Scss, Jsx and images in the HTTP stream. However it doesn't want to lock you down to a specific version of a preprocessor, as functionality might vary across versions, you might be stuck on an old version, you want to use a beta or whatever. This means installing the preprocessor is up to you. You will get a warning in the logs if you try to send something through the pipeling that is missing the corresponding module to compile, however it might be nice just to install what you need up front:
+Grunt-livestyle enables you to preprocess Less, Scss, Jsx and images in the HTTP stream. However it doesn't want to lock you down to a specific version of a preprocessor, as functionality might vary across versions, you might be stuck on an old version, you want to use a beta or whatever. This means installing the preprocessor is up to you. You will get a warning in the logs if you try to send something through the pipeline that is missing the corresponding module to compile, however it might be nice just to install what you need up front:
 
 - **Less:** `npm install --save-dev less`
 - **Scss:** `npm install --save-dev node-sass`

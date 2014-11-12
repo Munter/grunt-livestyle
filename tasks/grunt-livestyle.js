@@ -19,7 +19,7 @@ module.exports = function (grunt) {
                 processimage: config.processimage === false ? false : true,
                 debug: !!config.debug,
                 mappings: config.mappings || {},
-                browsers: config.browsers || [
+                browsers: config.browsers === false ? false || [
                     '> 1%',
                     'last 2 versions',
                     'Firefox ESR',

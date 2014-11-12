@@ -1,3 +1,5 @@
+var Path = require('path');
+
 module.exports = function (grunt) {
     'use strict';
 
@@ -6,7 +8,7 @@ module.exports = function (grunt) {
 
         var config = grunt.config(this.name) || {},
             options = {
-                root: config.root || 'app',
+                root: Path.resolve(config.root || 'app'),
                 port: config.port || 9000,
                 proxy: config.proxy || null,
                 jsx: config.jsx === false ? false : true,

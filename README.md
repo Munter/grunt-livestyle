@@ -88,10 +88,10 @@ module.exports = function (grunt) {
             scss: true,
 
             // Watch HTML-files and livereload on changes
-            html: true,
+            watchHtml: true,
 
             // Watch CSS bakground images and livereload on changes
-            cssImages: true,
+            watchCssImages: true,
 
             // Run each image through the image processing pipeline exposed by express-processimage
             // Allows you to resize, recompress, change image format, rasterize SVG and much more
@@ -112,7 +112,7 @@ module.exports = function (grunt) {
 
             // Browser version configuration
             // This is used for autoprefixing, but may in the future also be used to browser version specific hacks
-            browsers: config.browsers || [
+            browsers: [
                 '> 1%',
                 'last 2 versions',
                 'Firefox ESR',

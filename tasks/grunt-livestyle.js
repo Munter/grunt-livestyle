@@ -18,6 +18,7 @@ module.exports = function (grunt) {
                 cssImages: config.watchCssImages === false ? false : true,
                 processimage: config.processimage === false ? false : true,
                 debug: !!config.debug,
+                dead: !!config.dead,
                 mappings: config.mappings || {}
             };
 

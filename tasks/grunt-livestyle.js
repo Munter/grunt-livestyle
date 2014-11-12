@@ -18,14 +18,24 @@ module.exports = function (grunt) {
                 cssImages: config.watchCssImages === false ? false : true,
                 processimage: config.processimage === false ? false : true,
                 debug: !!config.debug,
-                mappings: config.mappings || {},
-                browsers: config.browsers === false ? false || [
-                    '> 1%',
-                    'last 2 versions',
-                    'Firefox ESR',
-                    'Opera 12.1'
-                ]
+                mappings: config.mappings || {}
             };
+
+        if (config.browsers === false) {
+            options.browsers = false;
+        } else if (typeof config.browsers === 'string') {
+            options.browsers = [config.browsers];
+        } else if (Array.isArray(config.browsers)) {
+            options.browsers = config.browsers;
+        } else {
+            // Autoprefixer default
+            options.browsers = [
+                '> 1%',
+                'last 2 versions',
+                'Firefox ESR',
+                'Opera 12.1'
+            ];
+        }
 
         var server = require('livestyle/lib/createLiveStyleApp')({
             watchHtml: options.html,

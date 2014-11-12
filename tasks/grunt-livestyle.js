@@ -63,7 +63,7 @@ module.exports = function (grunt) {
                 debug: options.debug,
                 root: options.root,
                 mtime: false,
-                watchfile: true,
+                watchfile: false,
                 mappings: options.mappings,
                 watchCssImages: options.cssImages
             }, require('socket.io'));

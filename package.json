@@ -1,6 +1,6 @@
 {
   "name": "grunt-livestyle",
-  "version": "1.2.6",
+  "version": "1.2.7",
   "description": "A static file development server with automated file watching, less/sass/jsx preprocessing, image preprocessing, autoprefixing and proxy passthrough",
   "main": "tasks/grunt-livestyle",
   "files": [

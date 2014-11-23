@@ -39,7 +39,7 @@
     "jshint": "^2.5.6"
   },
   "dependencies": {
-    "livestyle": "^1.0.7",
+    "livestyle": "^1.0.8",
     "socket.io": "^0.9.16"
   }
 }

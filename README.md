@@ -1,8 +1,8 @@
 Grunt-livestyle
 ===============
-[![NPM version](https://badge.fury.io/js/grunt-livestyle.png)](http://badge.fury.io/js/grunt-livestyle)
-[![Build Status](https://travis-ci.org/Munter/grunt-livestyle.png?branch=master)](https://travis-ci.org/Munter/grunt-livestyle)
-[![Dependency Status](https://david-dm.org/Munter/grunt-livestyle.png)](https://david-dm.org/Munter/grunt-livestyle)
+[![NPM version](https://badge.fury.io/js/grunt-livestyle.svg)](http://badge.fury.io/js/grunt-livestyle)
+[![Build Status](https://travis-ci.org/Munter/grunt-livestyle.svg?branch=master)](https://travis-ci.org/Munter/grunt-livestyle)
+[![Dependency Status](https://david-dm.org/Munter/grunt-livestyle.svg)](https://david-dm.org/Munter/grunt-livestyle)
 
 Grunt-livestyle is a static development server that allows you to have a very efficient development loop with a minimal configuration. The aim of this project is to deliver an out of the box working server that does the right thing, lets the developer work without massive processing toolchains, and simplify their code base down to just working with urls that work in a browser.
 

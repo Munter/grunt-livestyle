@@ -1,4 +1,5 @@
 var Path = require('path');
+var open = require('open');
 
 module.exports = function (grunt) {
     'use strict';
@@ -67,6 +68,8 @@ module.exports = function (grunt) {
 
             grunt.log.writeln('Listening to http://' + '0.0.0.0' + ':' + options.port + '/');
             grunt.event.emit('serverListening', options.port);
+
+            open('http://0.0.0.0:' + options.port + '/');
         });
 
         if (!options.dead) {
